@@ -1,0 +1,796 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    color: #3a3a3a;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    padding: 20px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #737373;
+}
+
+/* Hero section styles */
+.hero {
+    background: url('./1.png') no-repeat center center/cover;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #eaeaea; /* Base color of the button */
+    color: #333;
+    text-decoration: none; /* This removes the underline from text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.btn:hover {
+    background-color: #dfdfdf; /* A slightly brighter shade for the hover state */
+    text-decoration: none; /* Ensure underline doesn't reappear on hover */
+}
+
+
+/* Collections preview styles */
+.collections-preview {
+    padding: 50px 5%;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.collection {
+    margin: 20px 0;
+}
+
+.collection h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Artist spotlight styles */
+.artist-spotlight {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.artist img {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.artist-info a {
+    color: #333;
+    text-decoration: none; /* Removes the underline */
+    transition: color 0.3s ease; /* Smooth color transition for hover */
+}
+
+.artist-info a:hover {
+    color: #505050; /* A brighter shade when hovered over */
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style-type: none;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+
+
+.artist-info a {
+    display: inline-block; /* Allows for padding and width/height if needed */
+    padding: 8px 16px; /* Add some padding around the text */
+    background-color: #d5d5d5; /* Neutral background */
+    color: #333; /* Text color */
+    text-decoration: none; /* Removes the underline */
+    border-radius: 4px; /* Rounded corners for a button-like appearance */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Optional: Uppercase lettering for stylistic preference */
+    letter-spacing: 1px; /* Space out the letters a little */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: none; /* No border */
+    cursor: pointer; /* Change cursor to indicate this is a clickable item */
+    margin-top: 40px;
+}
+
+.artist-info a:hover {
+    background-color: #dfdfdf; /* Slightly lighter background on hover */
+    color: #000; /* Optional: change text color on hover for contrast */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+    transform: translateY(-2px); /* Optional: subtle lift effect on hover */
+}
+
+
+.collection img {
+    max-width: 100%; /* ensures image is never more than 100% of its parent */
+    height: auto; /* maintains aspect ratio */
+    border-radius: 5px; /* optional: to give images slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: adds shadow for some depth */
+    transition: transform 0.3s ease; /* smooth transition for hover effect */
+}
+
+.collection {
+    max-width: 80%; /* adjusts the size of the collection container */
+    margin: 20px auto; /* centers the collection in the parent element */
+    text-align: center; /* ensures text aligns in the center */
+}
+
+/* Hover effect to scale image */
+.collection img:hover {
+    transform: scale(1.05); /* slightly enlarges the image */
+}
+
+/* Media query for tablet devices */
+@media (max-width: 768px) {
+    .collection {
+        max-width: 90%; /* increases the width on smaller screens */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .collection {
+        max-width: 95%; /* allows the collection to take up more space on small screens */
+    }
+}
+
+
+
+
+/* Media queries for tablets and desktops */
+@media (min-width: 768px) {
+    /* Adjustments for tablet screens */
+    header, .hero, .collections-preview, .artist-spotlight, footer {
+        padding: 4em 2em;
+    }
+
+    nav ul {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        padding: 0;
+        margin: 0 10px;
+    }
+
+    .hero {
+        background: url('./1.png') no-repeat center center/cover;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Adjustments for desktop screens */
+    header {
+        padding: 1em 10%;
+    }
+
+    .hero {
+        background: url('./1.png') no-repeat center center/cover;
+        padding: 5em 10%;
+    }
+
+    .collections-preview, .artist-spotlight {
+        padding: 4em 10%;
+    }
+
+    .artist-info a {
+        display: inline-block;
+    }
+
+    footer {
+        padding: 2em 10%;
+    }
+}
+
+
+/* Base mobile navigation styles */
+nav {
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Styles for nav link when tapped or clicked */
+nav a:active {
+    background-color: #eaeaea;
+}
+
+/* Optional: hover styles, which may be useful for devices with mouse support */
+nav a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Visually hidden class for checkbox used for toggle */
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 10px 0;
+    transition: all 0.3s;
+}
+
+/* Hamburger Icon Before/After for the 'bun' */
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* Transform hamburger into 'X' when menu is opened */
+#menu-toggle:checked + .hamburger {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger::before {
+    transform: rotate(90deg) translate(-10px, -10px);
+    opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger::after {
+    transform: rotate(90deg) translate(-10px, 12px);
+}
+
+/* Show menu when checkbox is checked */
+#menu-toggle:checked ~ nav ul {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    /* Hide checkbox and transform nav for larger screens */
+    .visually-hidden,
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        padding: 0 10px;
+    }
+
+    nav a {
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+
+/* Усиленная тень для главного заголовка */
+.hero h1 {
+    font-size: 3em;
+    color: #3e4b52;
+   
+}
+
+/* Усиленная тень для текста под заголовком */
+.hero p {
+    font-size: 1.5em;
+    color: #3e4b52;
+    
+}
+
+/* Добавление тени под кнопкой */
+.btn {
+    background-color: #eaeaea;
+    color: #3e4b52;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Тень для кнопки */
+}
+
+.btn:hover {
+    background-color: #dfdfdf;
+   box-shadow: 3px 3px 12px rgba(27, 27, 27, 0.6);  /* Усиленная тень при наведении */
+}
+
+
+
+
+
+
+
+.shop-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.shop-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.shop-item {
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    background: #fff;
+}
+
+.shop-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.shop-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.shop-item p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.detail-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.detail-link:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .shop-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-item {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.artist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.artist-profile {
+    width: calc(50% - 40px);
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.artist-profile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.artist-profile h2 {
+    margin-top: 20px;
+}
+
+.artist-profile p {
+    font-size: 20px;
+    margin-top: 10px;
+    
+}
+
+
+
+.view-collection {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .artist-profile {
+        width: 90%;
+    }
+}
+
+
+
+
+
+.logo a {
+    text-decoration: none; /* Убираем подчёркивание ссылки */
+    color: #3a3a3a; /* Задаём цвет текста, соответствующий вашему дизайну */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Опционально: добавляем эффекты при наведении для улучшения взаимодействия */
+.logo a:hover, .logo a:focus {
+    
+    color: #737373; /* Меняем цвет для наглядности */
+}
+
+
+
+
+
+.about-us {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 30px;
+    height: 60vh;
+
+}
+
+.about-image {
+    max-width: auto;
+    max-height: 400px;
+    margin: 20px 0;
+}
+
+
+.about-us h2 {
+    color: #4a6e83;
+}
+
+
+.services-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.service h2 {
+    color: #4a6e83;
+}
+
+.service p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+
+main {
+    display: flex; /* Использование Flexbox */
+    flex-direction: column; /* Элементы выстраиваются вертикально */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    justify-content: center; /* Центрирование элементов по вертикали, если у <main> есть фиксированная высота */
+    text-align: center; /* Центрирование текста внутри блоков */
+}
+
+.artist {
+    width: 100%; /* Занимает всю доступную ширину */
+}
+
+.artist-profile {
+    margin: 20px; /* Добавляет пространство между профилями артистов */
+    width: calc(100% - 40px); /* Ширина с учетом отступов */
+    max-width: 600px; /* Максимальная ширина блока, чтобы он не был слишком широким на больших экранах */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Небольшая тень для визуального выделения */
+}
+
+.artist-profile img {
+    max-width: 70%; /* Изображение артиста адаптируется под размер блока */
+    height: auto; /* Сохранение пропорций изображения */
+}
+
+.view-collection {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #377192; /* Синий цвет фона */
+    color: #ffffff; /* Белый текст */
+    padding: 12px 24px; /* Подушечки вокруг текста */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    border-radius: 5px; /* Скругляем углы */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавное изменение фона и трансформация */
+    border: 2px solid transparent; /* Прозрачная граница для сохранения размера при наведении */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.view-collection:hover, .view-collection:focus {
+    background-color: #1b6189; /* Темно-синий цвет фона при наведении */
+    color: #ffffff; /* Белый текст сохраняется */
+    transform: translateY(-3px); /* Небольшое смещение вверх для эффекта "поднятия" */
+    border: 2px solid #ffffff; /* Белая граница при наведении */
+}
+
+.view-collection:active {
+    background-color: #004085; /* Еще более темный синий при нажатии */
+    transform: translateY(1px); /* Отмена смещения вверх при нажатии */
+    border-color: #002753; /* Темно-синяя граница при нажатии */
+}
+
+
+@media (max-width: 768px) {
+    .artist-profile {
+        /* Адаптации для мобильных устройств */
+        width: 90%; /* Немного уменьшаем ширину на мобильных устройствах */
+    }
+}
+
+
+
+.art-shop {
+    padding: 20px;
+    text-align: center;
+}
+
+.art-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.art-item {
+    width: calc(33.333% - 40px);
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.art-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.art-item h2, .art-item p {
+    margin: 10px 0;
+}
+
+.purchase-link {
+    display: inline-block;
+    background-color: #4a6e83b5;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.purchase-link:hover {
+    background-color: #3c7493b5;
+}
+
+
+
+.blog-resources {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.blog-post {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #4a6e83;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: rgb(38, 91, 148);
+}
+
+
+
+.how-to-buy {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.how-to-buy ol {
+    counter-reset: step;
+}
+
+.how-to-buy li {
+    counter-increment: step;
+    margin-bottom: 20px;
+}
+
+.how-to-buy li::before {
+    content: counter(step) ". ";
+    font-weight: bold;
+    color: #4a6e83;
+}
+
+.how-to-buy h2 {
+    margin-top: 0;
+}
+
+
+.how-to-buy ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding-left: 0; /* Убираем отступ слева */
+}
+
+.how-to-buy li {
+    margin-bottom: 20px; /* Добавляем нижний отступ для каждого элемента списка */
+}
+
+.how-to-buy li::before {
+    content: ""; /* Убираем счетчик */
+}
+
+.how-to-buy h2 {
+    margin-top: 0;
+}
