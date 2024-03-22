@@ -581,7 +581,7 @@ header nav ul li a {
     max-width: 800px;
     margin: auto;
     margin-top: 30px;
-    height: 60vh;
+    
 
 }
 
@@ -793,4 +793,44 @@ main {
 
 .how-to-buy h2 {
     margin-top: 0;
+}
+
+
+
+/* Base styles are for desktop and do not need to be repeated here. */
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    .art-items {
+        margin: 0 -10px; /* Adjust margins to use screen space effectively */
+    }
+  
+    .art-item {
+        width: 100%; /* Full width for mobile devices */
+        padding: 0 10px; /* Add padding to maintain spacing */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+
+    .art-item img {
+        width: 100%; /* Full width images on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .art-item h2 {
+        font-size: 1.2em; /* Adjust the title font size for mobile */
+    }
+
+    .art-item p {
+        font-size: 1em; /* Adjust the text font size for mobile */
+    }
+
+    .purchase-link {
+        padding: 10px; /* Larger touch targets for mobile */
+        font-size: 1em; /* Adjust button text size for mobile */
+        width: 100%; /* Optional: Full width buttons on mobile */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        margin-top: 10px; /* Add some space above the button */
+    }
+
+    /* Any other mobile-specific styles */
 }
